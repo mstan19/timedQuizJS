@@ -1,0 +1,13 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#startBtn {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    background: #7851a9;
+    font-size: 18px;
+}
+
+
