@@ -97,3 +97,11 @@ function GoToNextQuestion () {
     document.getElementById('answerC') = ListofQuestion[currentQuestion].answerC;
     document.getElementById('answerD') = ListofQuestion[currentQuestion].answerD;
 }
+
+function endQuiz () {
+    document.getElementById('question') = ""
+    document.getElementById('answerA') = ""
+    document.getElementById('answerB') = ""
+    document.getElementById('answerC') = ""
+    document.getElementById('answerD') = ""
+}
