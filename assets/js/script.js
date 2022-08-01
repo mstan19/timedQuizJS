@@ -1,6 +1,7 @@
 const startBtn = document.getElementById('startBtn');
 const questionContainerElement = document.getElementById("questionContainer"); 
 var listOfQuestions = document.getElementById('questionContainer');
+var currentScore = 0
 
 
 startBtn.addEventListener("click", startQuiz) 
@@ -59,25 +60,29 @@ function clickedAnswerD () {
 }
 //Timer section
 var secondsLeft = 60;
-var interval = setInterval(function(){
+var interval = setInterval(function () {
   document.getElementById('count').innerHTML = secondsLeft;
   secondsLeft--;
-  if (secondsLeft === 0){
+  if (secondsLeft === 0) {
     clearInterval(interval);
     document.getElementById('count').innerHTML = 'No Time Left';
     alert("You're out of time!");
   }
 }, 1000);
 
-// //then ... the user's answer will be compared to the correct answer
-// function compareAnswer (checkAnswer) {
-//     var correctAnswer = listOfQuestions[currentQuestion].correctAnswer
-//     if (checkAnswer === correctAnswer) {
-//         //+add to score
-        
-//     } else (
-//        // --10 seconds from time
-//     )
-// GoToNextQuestion ();
 
-// }
+//then ... the user's answer will be compared to the correct answer
+//Subtracting time when user gets the question wrong
+function compareAnswer (checkAnswer) {
+    var correctAnswer = listOfQuestions[currentQuestion].correctAnswer
+    if (checkAnswer === correctAnswer) {
+        currentScore += 10;
+        
+    } else {
+        document.getElementById('count').innerHTML = secondsLeft;
+        secondsLeft -= 10;
+    }
+    
+GoToNextQuestion ();
+
+}
