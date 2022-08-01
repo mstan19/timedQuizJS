@@ -1,3 +1,24 @@
+startbtn -> start quiz
+    intro instructions to hide
+    one question to appear
+        
+
+
+Quizzing time
+    timer starts
+    record the answer that the user inputted (localStorage)
+    substract 10 seconds wehn getting the answer wrong
+    once select answer go to the next question
+    if the timer reaches zero or if the last question then the quiz will end
+
+
+end quiz 
+    appear results
+    type inital 
+    record scores in LS so you cannot redo the quiz
+    
+
+    
 var start btn = document.getElementById('startBtn');
 var listQuestions = document.getElementById('questionContainer');
 var currentQuestion = 0
