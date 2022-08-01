@@ -2,6 +2,9 @@ const startBtn = document.getElementById('startBtn');
 const questionContainerElement = document.getElementById("questionContainer"); 
 var listOfQuestions = document.getElementById('questionContainer');
 var currentScore = 0
+const initialsEl = document.getElementById('initials');
+const finalScoreEl = document.getElementById('finalScore');
+
 
 
 startBtn.addEventListener("click", startQuiz) 
@@ -61,7 +64,7 @@ function clickedAnswerD () {
 //Timer section
 var secondsLeft = 60;
 var interval = setInterval(function () {
-  document.getElementById('count').innerHTML = secondsLeft;
+  document.getElementById('count').innerHTML = secondsLeft + " seconds remaining";
   secondsLeft--;
   if (secondsLeft === 0) {
     clearInterval(interval);
@@ -98,10 +101,18 @@ function GoToNextQuestion () {
     document.getElementById('answerD') = ListofQuestion[currentQuestion].answerD;
 }
 
+//score and store in Local storage
 function endQuiz () {
     document.getElementById('question') = ""
     document.getElementById('answerA') = ""
     document.getElementById('answerB') = ""
     document.getElementById('answerC') = ""
     document.getElementById('answerD') = ""
+
+    var initials = initialsEl.value;
+    var finalScore = currentScore;
+    finalScoreE1.textContent = finalScore;
+
+    localStorage.getItem ("finalScore", finalScore);
+    localStorage.setItem ("finalScore", finalScore);
 }
