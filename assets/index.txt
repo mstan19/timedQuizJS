@@ -1,0 +1,86 @@
+var start btn = document.getElementById('startBtn');
+var listQuestions = document.getElementById('questionContainer');
+var currentQuestion = 0
+
+function StartQuiz () {
+    //goal to change text in html (get soemthing = what you change)   
+    //get element html = array of question[object in that array].attributes in that object
+document.getElementById('question') = ListofQuestion[currentQuestion].question
+document.getElementById('answerA') = ListofQuestion[currentQuestion].answerA
+document.getElementById('answerB') = ListofQuestion[currentQuestion].answerB
+document.getElementById('answerC') = ListofQuestion[currentQuestion].answerC
+document.getElementById('answerD') = ListofQuestion[currentQuestion].answerD
+}
+
+clickedAnswerA () {
+    checkAnswer ("answerA");
+}
+
+clickedAnswerB () {
+    checkAnswer ("answerB");
+}
+
+clickedAnswerC () {
+    checkAnswer ("answerC");
+}
+
+clickedAnswerD () {
+    checkAnswer ("answerD");
+}
+
+//compare users answer to correct answer
+function compareAnswer (checkAnswer) {
+    var correctAnswer = listOfQuestions[currentQuestion].correctAnswer
+    if (checkAnswer === correctAnswer) {
+        +add to score
+        
+    } else (
+        --10 seconds from time
+    )
+    GoToNextQuestion ();
+
+}
+
+function GoToNextQuestion () {
+    currentQuestion = currentQuestion + 1
+    if (currentQuestion >= listOfQuestions.length) {
+        return ();
+    endQuiz();
+    }
+    document.getElementById('question') = ListofQuestion[currentQuestion].question
+document.getElementById('answerA') = ListofQuestion[currentQuestion].answerA
+document.getElementById('answerB') = ListofQuestion[currentQuestion].answerB
+document.getElementById('answerC') = ListofQuestion[currentQuestion].answerC
+document.getElementById('answerD') = ListofQuestion[currentQuestion].answerD
+}
+
+
+function endQuiz () {
+    document.getElementById('question') = ""
+    document.getElementById('answerA') = ""
+    document.getElementById('answerB') = ""
+    document.getElementById('answerC') = ""
+    document.getElementById('answerD') = ""
+}
+
+
+const listOfQuestions [
+    {Question:"What is JS?",
+    answerA: "dog",
+    answerB: "cat",
+    answerC: "bird",
+    answerD: "js is",
+    correctAnswer: "answerA"
+    }
+
+    {Question:"What is html?",
+    answerA: "bear",
+    answerB: "lion",
+    answerC: "tiger",
+    answerD: "html is",
+    correctAnswer: "answerB"
+    }
+]
+
+
+**anything outside a function will run it one time bc comp reads top to bottom

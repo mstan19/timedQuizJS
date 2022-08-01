@@ -13,9 +13,8 @@
     color: white;
     cursor: pointer;
     position:relative;
-    margin-left: 800px;
+    margin-left: 850px;
     margin-top: 40px;
-    display:none;
 }
 
 #nextBtn {
@@ -25,9 +24,9 @@
     font-size: 20px;
     color: white;
     cursor: pointer;
-    position:absolute;
+    position:relative;
     margin-left: 850px;
-    margin-top: 450px;
+    margin-top: 50px;
 }
 
 #startBtn:hover {
@@ -41,7 +40,6 @@
 }
 
 .intro {
-    display:none;
     width: 600px;
     background: white;
     border-radius: 5px;
@@ -65,7 +63,7 @@
     display: flex;
     justify-content: center;
     background-color: white;
-    padding: 20px;;
+    padding: 20px;
 
 }
 #question {
@@ -78,5 +76,9 @@
     flex-direction: row;
     margin-right: 550px;
     font-size: 1.3rem;
+}
+
+.hideThis {
+    display: none;
 }
 

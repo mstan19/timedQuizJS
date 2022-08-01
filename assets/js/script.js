@@ -1,20 +1,16 @@
 const startBtn = document.getElementById('startBtn');
-startBtn.addEventListener("click", function(event) {
+const questionContainerElement = document.getElementById("questionContainer"); 
 
 
-function startBtn {
+startBtn.addEventListener("click", startQuiz) 
 
+function startQuiz () {
+    console.log("start")
+    startBtn.classList.add("hideThis");
+    questionContainerElement.classList.remove("hideThis");
+    GoToNextQuestion ();
 }
 
-function goNextQuestion {
+function GoToNextQuestion () {
 
 }
-
-function pickAnswer {
-
-}
-
-
-
-
-    
