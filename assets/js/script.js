@@ -82,7 +82,18 @@ function compareAnswer (checkAnswer) {
         document.getElementById('count').innerHTML = secondsLeft;
         secondsLeft -= 10;
     }
+}
     
-GoToNextQuestion ();
+function GoToNextQuestion () {
+    currentQuestion = currentQuestion + 1
+    if (currentQuestion >= listOfQuestions.length) {
+        return;
+    endQuiz();
+    }
 
+    document.getElementById('question') = ListofQuestion[currentQuestion].question;
+    document.getElementById('answerA') = ListofQuestion[currentQuestion].answerA;
+    document.getElementById('answerB') = ListofQuestion[currentQuestion].answerB;
+    document.getElementById('answerC') = ListofQuestion[currentQuestion].answerC;
+    document.getElementById('answerD') = ListofQuestion[currentQuestion].answerD;
 }
