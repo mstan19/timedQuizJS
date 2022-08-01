@@ -20,6 +20,7 @@ function StartQuiz () {
     document.getElementById('answerD') = ListofQuestion[currentQuestion].answerD
 }
 
+//this includes the questionstem and answer choices
 var listOfQuestions = [
     {
         Question: "What is JS?",
@@ -39,3 +40,44 @@ var listOfQuestions = [
         correctAnswer: "answerB"
     }
 ]
+
+//After the user clickes on an answer choice, it will check the answer. Then...
+function clickedAnswerA () {
+    checkAnswer ("answerA");
+}
+
+function clickedAnswerB () {
+    checkAnswer ("answerB");
+}
+
+function clickedAnswerC () {
+    checkAnswer ("answerC");
+}
+
+function clickedAnswerD () {
+    checkAnswer ("answerD");
+}
+//Timer section
+var secondsLeft = 60;
+var interval = setInterval(function(){
+  document.getElementById('count').innerHTML = secondsLeft;
+  secondsLeft--;
+  if (secondsLeft === 0){
+    clearInterval(interval);
+    document.getElementById('count').innerHTML = 'No Time Left';
+    alert("You're out of time!");
+  }
+}, 1000);
+
+// //then ... the user's answer will be compared to the correct answer
+// function compareAnswer (checkAnswer) {
+//     var correctAnswer = listOfQuestions[currentQuestion].correctAnswer
+//     if (checkAnswer === correctAnswer) {
+//         //+add to score
+        
+//     } else (
+//        // --10 seconds from time
+//     )
+// GoToNextQuestion ();
+
+// }
