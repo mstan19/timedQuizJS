@@ -33,7 +33,7 @@ jsToHtml();
 //Goal: Get html element and assign it to  what you want to change
 //get element html = array of question[object in that array].attributes in that object
 function jsToHtml () {
-console.log("yo");
+//console.log("yo");
     document.getElementById("question").innerHTML = listOfQuestions[currentQuestion].question;
     document.getElementById("answerA").innerHTML = listOfQuestions[currentQuestion].answerA;
     document.getElementById("answerB").innerHTML = listOfQuestions[currentQuestion].answerB;
@@ -207,18 +207,17 @@ function endQuiz () {
 highScore.addEventListener("click", pastHighScore);
 
 
-function pastHighScore() {
-    var finalScore = currentScore;
-    var getInitials = localStorage.getItem ("Your initals");
-    var getScore = localStorage.getItem ("Your Score");
-    console.log(finalScore);
+// function pastHighScore() {
+//     var finalScore = currentScore;
+//     var getInitials = localStorage.getItem ("Your initals");
+//     var getScore = localStorage.getItem ("Your Score");
+//     console.log(finalScore);
     
-    // for (var i = 0; i < getScore.length; i++) {
-    //     getScore[i].initialsEl;
-    //     getScore[i].finalScoreEl;
-    // }
-    var data = JSON.parse(localStorage.getItem(getScore));
-    data.textContent;
+//     // for (var i = 0; i < getScore.length; i++) {
+//     //     getScore[i].initialsEl;
+//     //     getScore[i].finalScoreEl;
+//     // }
+//     var data = JSON.parse(localStorage.getItem(getScore));
+//     data.textContent;
    
-    
-}
+// }

@@ -14,5 +14,5 @@ This is what the quiz looks like when the user loads the quiz to the browser.
 
 ## How to deploy the link application
 * Click on this link for deployed application
-* https://mstan19.github.io/PasswordGenerator/
+* https://github.com/mstan19/timedQuizJS
 
