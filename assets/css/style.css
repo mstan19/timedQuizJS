@@ -1,6 +1,6 @@
 :root {
     font-family: 'Times New Roman', Times, serif;
-    background-color:rgb(224, 163, 176);
+    background-color:rgb(235, 194, 203);
 }
 
 
@@ -76,13 +76,16 @@
     flex-direction: row;
     margin-right: 550px;
     font-size: 1.3rem;
+    width: 150px;
+    text-align:left;
+    margin-top: 20px;
 }
 
 .hideThis {
     display: none;
 }
 
-.result {
+#result {
     width: 600px;
     background: white;
     border-radius: 5px;
@@ -90,5 +93,24 @@
     margin: 0 auto;
     font-size: 20px;
     margin-top: 100px;
+    padding: 30px;
 
 }
+
+#count {
+    position:absolute;
+    right:40px;
+    top:30px;
+}
+
+#questionContainer {
+    width: 600px;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 100px;
+    padding: 30px;
+}
+
